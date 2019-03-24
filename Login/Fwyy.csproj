@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E29519C3-EC33-409F-8543-3B54835D3D67}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Login</RootNamespace>
+    <AssemblyName>Login</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Neusoft\Mysql\MCNet8.0.15\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="form\OAccessAccredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\OAccessAccredit.Designer.cs">
+      <DependentUpon>OAccessAccredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\AccessControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\AccessControl.Designer.cs">
+      <DependentUpon>AccessControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBform\AccessDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBform\AccessDB.Designer.cs">
+      <DependentUpon>AccessDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\OCardManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\OCardManage.Designer.cs">
+      <DependentUpon>OCardManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\CardSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\CardSet.Designer.cs">
+      <DependentUpon>CardSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBform\CardDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBform\CardDB.Designer.cs">
+      <DependentUpon>CardDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBform\PersonDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBform\PersonDB.Designer.cs">
+      <DependentUpon>PersonDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\PersonMessageChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\PersonMessageChange.Designer.cs">
+      <DependentUpon>PersonMessageChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newform\AccessAccredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newform\AccessAccredit.Designer.cs">
+      <DependentUpon>AccessAccredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newform\AccessControl_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newform\AccessControl_Test.Designer.cs">
+      <DependentUpon>AccessControl_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newform\AccessManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newform\AccessManage.Designer.cs">
+      <DependentUpon>AccessManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newform\Bind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newform\Bind.Designer.cs">
+      <DependentUpon>Bind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newform\BindUnbind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newform\BindUnbind.Designer.cs">
+      <DependentUpon>BindUnbind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newform\CardManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newform\CardManage.Designer.cs">
+      <DependentUpon>CardManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newform\Group.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newform\Group.Designer.cs">
+      <DependentUpon>Group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newform\Mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newform\Mainform.Designer.cs">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newform\MemberManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newform\MemberManage.Designer.cs">
+      <DependentUpon>MemberManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newform\Swing_Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newform\Swing_Log.Designer.cs">
+      <DependentUpon>Swing_Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\PersonManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\PersonManage.Designer.cs">
+      <DependentUpon>PersonManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newform\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newform\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\OAccessManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\OAccessManage.Designer.cs">
+      <DependentUpon>OAccessManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newform\UnAccredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newform\UnAccredit.Designer.cs">
+      <DependentUpon>UnAccredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newform\Unbind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newform\Unbind.Designer.cs">
+      <DependentUpon>Unbind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.cs" />
+    <EmbeddedResource Include="form\OAccessAccredit.resx">
+      <DependentUpon>OAccessAccredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\AccessControl.resx">
+      <DependentUpon>AccessControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBform\AccessDB.resx">
+      <DependentUpon>AccessDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\OCardManage.resx">
+      <DependentUpon>OCardManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\CardSet.resx">
+      <DependentUpon>CardSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBform\CardDB.resx">
+      <DependentUpon>CardDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBform\PersonDB.resx">
+      <DependentUpon>PersonDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\PersonMessageChange.resx">
+      <DependentUpon>PersonMessageChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newform\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\OAccessManage.resx">
+      <DependentUpon>OAccessManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newform\AccessAccredit.resx">
+      <DependentUpon>AccessAccredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newform\AccessControl_Test.resx">
+      <DependentUpon>AccessControl_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newform\AccessManage.resx">
+      <DependentUpon>AccessManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newform\Bind.resx">
+      <DependentUpon>Bind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newform\BindUnbind.resx">
+      <DependentUpon>BindUnbind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newform\CardManage.resx">
+      <DependentUpon>CardManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newform\Group.resx">
+      <DependentUpon>Group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newform\Mainform.resx">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newform\MemberManage.resx">
+      <DependentUpon>MemberManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newform\Swing_Log.resx">
+      <DependentUpon>Swing_Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\PersonManage.resx">
+      <DependentUpon>PersonManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newform\UnAccredit.resx">
+      <DependentUpon>UnAccredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newform\Unbind.resx">
+      <DependentUpon>Unbind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBform\Beep Sound.wav-21324-Free-Loops.com.mp3" />
+    <Content Include="newform\Requirement.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
